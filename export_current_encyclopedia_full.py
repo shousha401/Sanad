@@ -1,7 +1,6 @@
 from pywinauto import Application
 from pywinauto.keyboard import send_keys
 from pathlib import Path
-from docx import Document
 import pyautogui
 import time
 import hashlib
@@ -21,6 +20,7 @@ LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 MIN_CHARS = 40
 MAX_PAGES = 50
+MAX_ITEMS_PER_PAGE = None
 STOP_AFTER_STAGNANT_PAGES = 2
 NAV_WAIT_SECONDS = 1.1
 COM_ERROR = getattr(ctypes, "COMError", Exception)
@@ -28,6 +28,12 @@ AUTO_EXPAND = False
 MANUAL_EXPANDED_MODE = True
 STOP_ON_REPEATED_PAGE_SIGNATURE = True
 STOP_AFTER_REPEAT_COUNT = 1
+SAVE_TXT = True
+SAVE_DOCX = False
+FAST_MODE = True
+CLICK_WAIT_SECONDS = 0.45
+READ_WAIT_SECONDS = 0.25
+MOVE_WAIT_SECONDS = 0.6
 
 def text_hash(text):
     return hashlib.md5(text.encode("utf-8", errors="ignore")).hexdigest()
@@ -106,46 +112,68 @@ def safe_focus_window(main_win, rect=None):
     except Exception:
         return False, "focus_failed"
 
-def read_rt_txt(main_window):
-    controls = main_window.descendants()
-
-    for c in controls:
+def find_rt_txt(main_window):
+    for c in main_window.descendants():
         auto_id = get_info(c, "automation_id")
         class_name = get_info(c, "class_name")
-
         if auto_id == "rt_txt" or "RichEdit20W" in class_name:
-            tries = []
+            return c
+    return None
 
-            try:
-                tries.append(c.window_text())
-            except Exception:
-                pass
+def read_rt_txt(rt_ctrl):
+    if rt_ctrl is None:
+        return ""
 
-            try:
-                texts = c.texts()
-                if texts:
-                    tries.append("\n".join(texts))
-            except Exception:
-                pass
+    tries = []
+    try:
+        tries.append(rt_ctrl.window_text())
+    except Exception:
+        pass
 
-            try:
-                tries.append(c.get_value())
-            except Exception:
-                pass
+    try:
+        texts = rt_ctrl.texts()
+        if texts:
+            tries.append("\n".join(texts))
+    except Exception:
+        pass
 
-            try:
-                tries.append(c.iface_value.CurrentValue)
-            except Exception:
-                pass
+    try:
+        tries.append(rt_ctrl.get_value())
+    except Exception:
+        pass
 
-            best = ""
-            for t in tries:
-                if t and len(t.strip()) > len(best):
-                    best = t.strip()
+    try:
+        tries.append(rt_ctrl.iface_value.CurrentValue)
+    except Exception:
+        pass
 
-            return best
+    best = ""
+    for t in tries:
+        if t and len(t.strip()) > len(best):
+            best = t.strip()
+    return best
 
-    return ""
+def is_access_denied_error(exc):
+    msg = str(exc).lower()
+    return isinstance(exc, (COM_ERROR, PermissionError, OSError)) or "access is denied" in msg
+
+def reacquire_context():
+    main_win, rect = get_eladalah_window()
+    tree_ctrl = find_tree_control(main_win)
+    if tree_ctrl is None:
+        raise RuntimeError("Could not find tv_Subjects tree control.")
+    rt_ctrl = find_rt_txt(main_win)
+    return main_win, tree_ctrl, rt_ctrl, rect
+
+def robust_read_text(rt_ctrl, retries=2):
+    empty_count = 0
+    for _ in range(retries + 1):
+        text = read_rt_txt(rt_ctrl)
+        if text.strip():
+            return text, empty_count
+        empty_count += 1
+        time.sleep(READ_WAIT_SECONDS)
+    return "", empty_count
 
 def find_tree_control(main_window):
     controls = main_window.descendants()
@@ -162,20 +190,7 @@ def find_tree_control(main_window):
     return None
 
 def get_context():
-    main_win, rect = get_eladalah_window()
-    tree_ctrl = find_tree_control(main_win)
-    if tree_ctrl is None:
-        raise RuntimeError("Could not find tv_Subjects tree control.")
-
-    rt_ctrl = None
-    for c in main_win.descendants():
-        auto_id = get_info(c, "automation_id")
-        class_name = get_info(c, "class_name")
-        if auto_id == "rt_txt" or "RichEdit20W" in class_name:
-            rt_ctrl = c
-            break
-
-    return main_win, tree_ctrl, rt_ctrl, rect
+    return reacquire_context()
 
 def rect_center(rect):
     return ((rect.left + rect.right) // 2, (rect.top + rect.bottom) // 2)
@@ -211,8 +226,8 @@ def visible_signature(visible_items):
     for item, name, r in visible_items:
         try:
             item_name = (get_name(item) or name or "").strip() or "(blank)"
-            rect = r or item.rectangle()
-            sig.append((item_name, int(rect.left), int(rect.top), int(rect.bottom)))
+            top = int((r.top if r else item.rectangle().top) / 20)
+            sig.append((item_name, top))
         except Exception:
             pass
     return tuple(sig)
@@ -288,12 +303,11 @@ def try_expand_tree_item(item, tree_ctrl):
 
     return False, ""
 
-def try_move_tree_down(before_sig):
+def try_move_tree_down(before_sig, main_win, tree_ctrl, rect):
     def after_changed():
-        main_win, tree_ctrl, _, rect = get_context()
         now_items = get_visible_tree_items(tree_ctrl)
         now_sig = visible_signature(now_items)
-        return now_sig != before_sig, now_items, now_sig, main_win, tree_ctrl, rect
+        return now_sig != before_sig, now_items, now_sig
 
     movement_methods = [
         ("PageDown", lambda: send_keys("{PGDN}")),
@@ -303,30 +317,31 @@ def try_move_tree_down(before_sig):
     ]
 
     for method_name, action in movement_methods:
-        main_win, tree_ctrl, _, rect = get_context()
         focused, _ = safe_focus_window(main_win, rect)
         if not focused:
             continue
         time.sleep(0.2)
+        cx, cy = None, None
         try:
             tree_rect = tree_ctrl.rectangle()
             cx, cy = rect_center(tree_rect)
             tree_ctrl.set_focus()
         except Exception:
-            pyautogui.click(cx, cy)
+            if cx is not None and cy is not None:
+                pyautogui.click(cx, cy)
         time.sleep(0.15)
 
         if method_name == "MouseWheel":
             pyautogui.scroll(-700, x=cx, y=cy)
         else:
             action()
-        time.sleep(NAV_WAIT_SECONDS)
+        time.sleep(MOVE_WAIT_SECONDS)
 
-        changed, now_items, now_sig, _, _, _ = after_changed()
+        changed, now_items, now_sig = after_changed()
         if changed:
             return True, method_name, now_items, now_sig
 
-    _, now_items, now_sig, _, _, _ = after_changed()
+    _, now_items, now_sig = after_changed()
     return False, "none", now_items, now_sig
 
 def load_done_hashes():
@@ -344,6 +359,8 @@ def load_done_hashes():
     return done
 
 def save_docx(text, docx_path, title):
+    from docx import Document
+
     doc = Document()
     doc.add_heading(title, level=1)
 
@@ -361,7 +378,7 @@ def main():
     done_hashes = load_done_hashes()
     print(f"Already exported hashes: {len(done_hashes)}")
 
-    main_win, tree_ctrl, _, _ = get_context()
+    main_win, tree_ctrl, rt_ctrl, _ = get_context()
     print("Tree control located.")
 
     file_exists = LOG_FILE.exists()
@@ -393,10 +410,12 @@ def main():
         while page <= MAX_PAGES:
             print(f"\n========== PAGE {page} ==========")
 
-            main_win, tree_ctrl, _, rect = get_context()
+            main_win, tree_ctrl, rt_ctrl, rect = get_context()
             safe_focus_window(main_win, rect)
             time.sleep(0.2)
             visible_items = get_visible_tree_items(tree_ctrl)
+            if MAX_ITEMS_PER_PAGE:
+                visible_items = visible_items[:MAX_ITEMS_PER_PAGE]
             before_sig = visible_signature(visible_items)
             writer.writerow({
                 "status": "PAGE_SEEN",
@@ -449,7 +468,6 @@ def main():
                 row_label = item_name or f"row-{idx}"
 
                 try:
-                    main_win, tree_ctrl, _, rect = get_context()
                     safe_focus_window(main_win, rect)
                     time.sleep(0.2)
                     current_items = get_visible_tree_items(tree_ctrl)
@@ -459,9 +477,12 @@ def main():
                     clicked, click_method = click_tree_item(fresh_item)
                     if not clicked:
                         raise RuntimeError("Failed to click tree item.")
-                    time.sleep(0.9)
+                    time.sleep(CLICK_WAIT_SECONDS)
 
-                    text = read_rt_txt(main_win)
+                    text, empty_reads = robust_read_text(rt_ctrl, retries=2 if FAST_MODE else 3)
+                    if empty_reads >= 2:
+                        main_win, tree_ctrl, rt_ctrl, rect = get_context()
+                        text, _ = robust_read_text(rt_ctrl, retries=1)
 
                     if len(text.strip()) < MIN_CHARS:
                         print(f"SKIP_SHORT page={page} row={idx} title={row_label}")
@@ -507,8 +528,10 @@ def main():
                             docx_path = DOCX_DIR / f"{base_name}.docx"
                             txt_path = TXT_DIR / f"{base_name}.txt"
 
-                            txt_path.write_text(text, encoding="utf-8")
-                            save_docx(text, docx_path, title)
+                            if SAVE_TXT:
+                                txt_path.write_text(text, encoding="utf-8")
+                            if SAVE_DOCX:
+                                save_docx(text, docx_path, title)
 
                             done_hashes.add(h)
                             new_this_page += 1
@@ -525,8 +548,8 @@ def main():
                                 "chars": len(text),
                                 "hash": h,
                                 "title": title,
-                                "docx_file": str(docx_path),
-                                "txt_file": str(txt_path),
+                                "docx_file": str(docx_path) if SAVE_DOCX else "",
+                                "txt_file": str(txt_path) if SAVE_TXT else "",
                                 "error": f"action=EXPORTED; click={click_method}",
                             })
                             f.flush()
@@ -572,13 +595,18 @@ def main():
                         "error": str(e),
                     })
                     f.flush()
-                    main_win, tree_ctrl, _, _ = get_context()
+                    if is_access_denied_error(e):
+                        main_win, tree_ctrl, rt_ctrl, rect = get_context()
 
             if expanded_any:
                 print(f"Restarting page {page} after expansion.")
                 continue
 
-            moved, nav_method, after_items, after_sig = try_move_tree_down(before_sig)
+            try:
+                moved, nav_method, after_items, after_sig = try_move_tree_down(before_sig, main_win, tree_ctrl, rect)
+            except Exception:
+                main_win, tree_ctrl, rt_ctrl, rect = get_context()
+                moved, nav_method, after_items, after_sig = try_move_tree_down(before_sig, main_win, tree_ctrl, rect)
             after_names = [name or "(blank)" for _, name, _ in after_items]
             print(f"Visible after move ({len(after_names)}): {after_names}")
             print(f"MOVE_DOWN page={page} moved={moved} method={nav_method}")
@@ -626,8 +654,10 @@ def main():
             page += 1
 
     print("\nFull export finished.")
-    print(f"DOCX: {DOCX_DIR}")
-    print(f"TXT:  {TXT_DIR}")
+    if SAVE_DOCX:
+        print(f"DOCX: {DOCX_DIR}")
+    if SAVE_TXT:
+        print(f"TXT:  {TXT_DIR}")
     print(f"LOG:  {LOG_FILE}")
 
 if __name__ == "__main__":
