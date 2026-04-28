@@ -20,10 +20,14 @@ TXT_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 MIN_CHARS = 40
-MAX_PAGES = 1000
-STOP_AFTER_STAGNANT_PAGES = 6
+MAX_PAGES = 50
+STOP_AFTER_STAGNANT_PAGES = 2
 NAV_WAIT_SECONDS = 1.1
 COM_ERROR = getattr(ctypes, "COMError", Exception)
+AUTO_EXPAND = False
+MANUAL_EXPANDED_MODE = True
+STOP_ON_REPEATED_PAGE_SIGNATURE = True
+STOP_AFTER_REPEAT_COUNT = 1
 
 def text_hash(text):
     return hashlib.md5(text.encode("utf-8", errors="ignore")).hexdigest()
@@ -204,13 +208,13 @@ def get_visible_tree_items(tree_ctrl):
 
 def visible_signature(visible_items):
     sig = []
-    for _, name, r in visible_items:
-        label = name if name else "(blank)"
-        top = r.top if r else -1
-        bottom = r.bottom if r else -1
-        left = r.left if r else -1
-        indent = max(0, left // 12) if left >= 0 else -1
-        sig.append(f"{top}:{bottom}:{indent}:{label}")
+    for item, name, r in visible_items:
+        try:
+            item_name = (get_name(item) or name or "").strip() or "(blank)"
+            rect = r or item.rectangle()
+            sig.append((item_name, int(rect.left), int(rect.top), int(rect.bottom)))
+        except Exception:
+            pass
     return tuple(sig)
 
 def click_tree_item(item, fallback_x=None):
@@ -382,6 +386,8 @@ def main():
             writer.writeheader()
 
         stagnant_pages = 0
+        seen_page_signatures = set()
+        repeat_page_count = 0
 
         page = 1
         while page <= MAX_PAGES:
@@ -392,6 +398,46 @@ def main():
             time.sleep(0.2)
             visible_items = get_visible_tree_items(tree_ctrl)
             before_sig = visible_signature(visible_items)
+            writer.writerow({
+                "status": "PAGE_SEEN",
+                "screen": page,
+                "page": page,
+                "visible_title": "",
+                "row": 0,
+                "chars": len(visible_items),
+                "hash": "",
+                "title": "",
+                "docx_file": "",
+                "txt_file": "",
+                "error": f"action=PAGE_SEEN; signature_items={len(before_sig)}",
+            })
+            f.flush()
+
+            if STOP_ON_REPEATED_PAGE_SIGNATURE and before_sig in seen_page_signatures:
+                repeat_page_count += 1
+                writer.writerow({
+                    "status": "STOP_REPEATED_PAGE",
+                    "screen": page,
+                    "page": page,
+                    "visible_title": "",
+                    "row": 0,
+                    "chars": len(visible_items),
+                    "hash": "",
+                    "title": "",
+                    "docx_file": "",
+                    "txt_file": "",
+                    "error": (
+                        "action=STOP_REPEATED_PAGE; "
+                        f"repeat_count={repeat_page_count}/{STOP_AFTER_REPEAT_COUNT}"
+                    ),
+                })
+                f.flush()
+                print("Stopping: repeated visible page signature")
+                if repeat_page_count >= STOP_AFTER_REPEAT_COUNT:
+                    break
+            else:
+                seen_page_signatures.add(before_sig)
+                repeat_page_count = 0
 
             before_names = [name or "(blank)" for _, name, _ in visible_items]
             print(f"Visible before move candidate ({len(before_names)}): {before_names}")
@@ -485,25 +531,26 @@ def main():
                             })
                             f.flush()
 
-                    expanded, method = try_expand_tree_item(fresh_item, tree_ctrl)
-                    if expanded:
-                        expanded_any = True
-                        print(f"EXPANDED page={page} row={idx} title={row_label} method={method}")
-                        writer.writerow({
-                            "status": "EXPANDED",
-                            "screen": page,
-                            "page": page,
-                            "visible_title": row_label,
-                            "row": idx,
-                            "chars": 0,
-                            "hash": "",
-                            "title": "",
-                            "docx_file": "",
-                            "txt_file": "",
-                            "error": f"action=EXPANDED; expand_method={method}",
-                        })
-                        f.flush()
-                        break
+                    if AUTO_EXPAND:
+                        expanded, method = try_expand_tree_item(fresh_item, tree_ctrl)
+                        if expanded:
+                            expanded_any = True
+                            print(f"EXPANDED page={page} row={idx} title={row_label} method={method}")
+                            writer.writerow({
+                                "status": "EXPANDED",
+                                "screen": page,
+                                "page": page,
+                                "visible_title": row_label,
+                                "row": idx,
+                                "chars": 0,
+                                "hash": "",
+                                "title": "",
+                                "docx_file": "",
+                                "txt_file": "",
+                                "error": f"action=EXPANDED; expand_method={method}",
+                            })
+                            f.flush()
+                            break
 
                     print(f"PROCESSED page={page} row={idx} title={row_label}")
 
@@ -537,13 +584,13 @@ def main():
             print(f"MOVE_DOWN page={page} moved={moved} method={nav_method}")
             print(f"New exports this page: {new_this_page}")
 
-            if (not moved) and new_this_page == 0:
+            if not moved:
                 stagnant_pages += 1
             else:
                 stagnant_pages = 0
 
             print(f"Stagnant pages: {stagnant_pages}/{STOP_AFTER_STAGNANT_PAGES}")
-            if (not moved) and new_this_page == 0:
+            if not moved:
                 writer.writerow({
                     "status": "STAGNANT",
                     "screen": page,
