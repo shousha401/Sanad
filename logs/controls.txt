@@ -1,0 +1,514 @@
+=== DESKTOP WINDOWS ===
+Taskbar
+w.window_text() - python  C:\EladalahExport\probe_eladalah.py
+Document1  -  Compatibility Mode - Word
+فلاشة العدالة القانونية إصدار 2025
+USB_Audit
+IMPORTANT_HITS.txt - Notepad
+Program Manager
+
+
+=== CONNECT UIA ===
+
+
+=== UIA WINDOW ===
+Title: فلاشة العدالة القانونية إصدار 2025
+Class: WindowsForms10.Window.8.app.0.141b42a_r8_ad1
+Rect: (L305, T35, R2358, B1435)
+
+Total descendants: 86
+
+[0] name='-' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='ExpandablePanel1' | rect=(L2310, T108, R2348, B1377)
+[1] name='المحتوي القانوني' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='69906' | rect=(L2310, T140, R2348, B1376)
+[2] name='المحتوي القانوني' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='1443378' | rect=(L2310, T108, R2348, B141)
+[3] name='TabStrip1' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TabStrip1' | rect=(L315, T74, R2348, B108)
+[4] name='Bar2' | type='ToolBar' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar2' | rect=(L315, T1376, R2348, B1425)
+[5] name='إغلاق جميع الشاشات' | type='Button' | class='' | auto_id='' | rect=(L320, T1381, R491, B1419)
+[6] name='إغلاق الشاشة الحالية' | type='Button' | class='' | auto_id='' | rect=(L491, T1381, R662, B1419)
+[7] name='تحديث الفلاشة' | type='Button' | class='' | auto_id='' | rect=(L666, T1381, R791, B1419)
+[8] name='' | type='Custom' | class='' | auto_id='' | rect=(L791, T1381, R1861, B1419)
+[9] name='أرشيف البحث' | type='Button' | class='' | auto_id='' | rect=(L1865, T1381, R1985, B1419)
+[10] name='إعدادات النظام' | type='Button' | class='' | auto_id='' | rect=(L1989, T1381, R2113, B1419)
+[11] name='الدعم الفني' | type='Button' | class='' | auto_id='' | rect=(L2116, T1381, R2220, B1419)
+[12] name='حول البرنامج' | type='Button' | class='' | auto_id='' | rect=(L2224, T1381, R2343, B1419)
+[13] name='' | type='Pane' | class='WindowsForms10.MDICLIENT.app.0.141b42a_r8_ad1' | auto_id='1246448' | rect=(L315, T108, R2310, B1377)
+[14] name='موسوعة التقادم' | type='Window' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Frm_Tree' | rect=(L318, T110, R2308, B1374)
+[15] name='' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='SplitContainer1' | rect=(L318, T110, R2308, B1333)
+[16] name='' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='69876' | rect=(L318, T110, R1289, B1333)
+[17] name='' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='SplitContainer2' | rect=(L318, T110, R1289, B1333)
+[18] name='' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='69880' | rect=(L318, T110, R1289, B1333)
+[19] name='' | type='Edit' | class='WindowsForms10.RichEdit20W.app.0.141b42a_r8_ad1' | auto_id='rt_txt' | rect=(L318, T159, R1289, B1333)
+[20] name='Bar1' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar1' | rect=(L318, T110, R1289, B159)
+[21] name='' | type='Edit' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='200938' | rect=(L1108, T121, R1273, B145)
+[22] name='ارسال النص لصديق' | type='Button' | class='' | auto_id='' | rect=(L319, T111, R492, B156)
+[23] name='اضافة النص للأرشيف' | type='Button' | class='' | auto_id='' | rect=(L495, T111, R680, B156)
+[24] name='تحويل لنص وورد' | type='Button' | class='' | auto_id='' | rect=(L684, T111, R842, B156)
+[25] name='تكبير النص' | type='Button' | class='' | auto_id='' | rect=(L845, T111, R960, B156)
+[26] name='بحث في النص' | type='Button' | class='' | auto_id='' | rect=(L964, T111, R1099, B156)
+[27] name='' | type='Button' | class='' | auto_id='' | rect=(L1099, T111, R1277, B156)
+[28] name='' | type='Button' | class='' | auto_id='' | rect=(L1280, T111, R1288, B156)
+[29] name='' | type='Edit' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox4' | rect=(L421, T273, R422, B299)
+[30] name='' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='69896' | rect=(L1295, T110, R2308, B1333)
+[31] name='' | type='Tree' | class='WindowsForms10.SysTreeView32.app.0.141b42a_r8_ad1' | auto_id='tv_Subjects' | rect=(L1295, T159, R2308, B1333)
+[32] name='Horizontal' | type='ScrollBar' | class='' | auto_id='NonClientHorizontalScrollBar' | rect=(L1298, T1309, R2306, B1335)
+[33] name='Column left' | type='Button' | class='' | auto_id='UpButton' | rect=(L1298, T1309, R1319, B1335)
+[34] name='Position' | type='Thumb' | class='' | auto_id='ScrollbarThumb' | rect=(L1319, T1309, R2008, B1335)
+[35] name='Page right' | type='Button' | class='' | auto_id='DownPageButton' | rect=(L2008, T1309, R2285, B1335)
+[36] name='Column right' | type='Button' | class='' | auto_id='DownButton' | rect=(L2285, T1309, R2306, B1335)
+[37] name='موسوعة التقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L2096, T161, R2254, B189)
+[38] name='موسوعة التقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L2073, T189, R2231, B217)
+[39] name='المجلد الأول : التقادم  الجنائي' | type='TreeItem' | class='' | auto_id='' | rect=(L1930, T216, R2206, B244)
+[40] name='القسم الأول : التقادم كسبب من أسباب انقضاء الدعوى الجنائية' | type='TreeItem' | class='' | auto_id='' | rect=(L1605, T244, R2183, B272)
+[41] name='التقادم لغة ، والتقادم كاصطلاح قانوني مستخدم في المجال الجنائي' | type='TreeItem' | class='' | auto_id='' | rect=(L1534, T271, R2159, B299)
+[42] name='لماذا اعتمد المشرع فكرة التقادم كأساس - وسبب - لانقضاء الدعوى' | type='TreeItem' | class='' | auto_id='' | rect=(L1535, T299, R2159, B327)
+[43] name='الدفع بالتقادم كطريق للحصول علي حكم بالبراءة .' | type='TreeItem' | class='' | auto_id='' | rect=(L1699, T326, R2159, B354)
+[44] name='ما هي الصياغة الصحيحة للدفع " تقادم الدعوى الجنائية أم سقوط الدعوى الجنائية "' | type='TreeItem' | class='' | auto_id='' | rect=(L1395, T354, R2159, B382)
+[45] name='كيف يكون انقضاء الدعوى الجنائية بالتقادم سبباً عارضاً للانقضاء' | type='TreeItem' | class='' | auto_id='' | rect=(L1586, T381, R2159, B409)
+[46] name='تحديد الأساس القانوني لتقادم الدعوى الجنائية بمضي المدة .' | type='TreeItem' | class='' | auto_id='' | rect=(L1596, T409, R2159, B437)
+[47] name='الجرائم التي لا تخضع لنظام تقادم الدعوى الجنائية بمضي المدة .' | type='TreeItem' | class='' | auto_id='' | rect=(L1568, T436, R2159, B464)
+[48] name='ميعاد خاص لبدء سريان التقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1863, T464, R2159, B492)
+[49] name='شروط صحة انقضاء الدعوى الجنائية بالتقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1743, T491, R2159, B519)
+[50] name='المدة اللازمة - للتقادم - في مختلف أنواع الجرائم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1700, T519, R2159, B547)
+[51] name='ضوابط سريان مدة التقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1908, T546, R2159, B574)
+[52] name='كيف نحدد تاريخ وقوع الجريمة كأساس للدفع بالتقادم ومشكلاته الهامة' | type='TreeItem' | class='' | auto_id='' | rect=(L1514, T574, R2159, B602)
+[53] name='خطأ محكمة الموضوع في تحديد وقت وقوع الجريمة كأساس للتقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L1533, T601, R2159, B629)
+[54] name='التكييف القانوني للجريمة وأثرة علي تحديد مدة التقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1650, T629, R2159, B657)
+[55] name='الظروف القضائية المخففة وأثرها وعلاقتها بالتقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1693, T656, R2159, B684)
+[56] name='الأعذار المخففة وأثرها علي العقوبة وعلاقتها بالتقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L1678, T684, R2159, B712)
+[57] name='الظروف المشددة للعقوبة وأثرها علي تحديد المدة اللازمة للتقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L1568, T711, R2159, B739)
+[58] name='العود كسبب عام لتشديد العقوبة المحكوم بها وأثر ذلك علي مدة التقادم .' | type='TreeItem' | class='' | auto_id='' | rect=(L1495, T739, R2159, B767)
+[59] name='القسم الثاني : الدفع بالتقادم في مواد الجنايات والجنح والمخالفات' | type='TreeItem' | class='' | auto_id='' | rect=(L1580, T766, R2183, B794)
+[60] name='القسم الثالث : الإجراءات القانونية التي تقطع سريان تقادم الدعوى الجنائية' | type='TreeItem' | class='' | auto_id='' | rect=(L1508, T794, R2183, B822)
+[61] name='القسم الرابع : الإجراءات التي أثارت خلافاً ومشكلات بشأن كونها تقطع سريان تقادم الدعوى الجنائية من عدمه' | type='TreeItem' | class='' | auto_id='' | rect=(L1298, T821, R2183, B849)
+[62] name='القسم الخامس : الآثار التي تترتب علي قطع تقادم الدعوى الجنائية' | type='TreeItem' | class='' | auto_id='' | rect=(L1573, T849, R2183, B877)
+[63] name='القسم السادس : سقوط العقوبة المحكوم بها بالتقادم' | type='TreeItem' | class='' | auto_id='' | rect=(L1691, T876, R2182, B904)
+[64] name='القسم السابع : المذكرات المتخصصة في دفوع التقادم الجنائية' | type='TreeItem' | class='' | auto_id='' | rect=(L1608, T904, R2183, B932)
+[65] name='المجلد الثاني : التقادم المدني' | type='TreeItem' | class='' | auto_id='' | rect=(L1930, T931, R2206, B959)
+[66] name='المجلد الثالث : التقادم الشرعي' | type='TreeItem' | class='' | auto_id='' | rect=(L1918, T959, R2207, B987)
+[67] name='Bar4' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar4' | rect=(L1295, T110, R2308, B159)
+[68] name='' | type='Edit' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='69910' | rect=(L1415, T121, R2009, B145)
+[69] name='' | type='Button' | class='' | auto_id='' | rect=(L1296, T111, R1327, B156)
+[70] name='' | type='Button' | class='' | auto_id='' | rect=(L1331, T111, R1362, B156)
+[71] name='' | type='Button' | class='' | auto_id='' | rect=(L1366, T111, R1406, B156)
+[72] name='' | type='Button' | class='' | auto_id='' | rect=(L1406, T111, R2012, B156)
+[73] name=': بحث في الفهرس ' | type='Custom' | class='' | auto_id='' | rect=(L2013, T111, R2166, B156)
+[74] name='عرض الغلاف' | type='Button' | class='' | auto_id='' | rect=(L2169, T111, R2307, B156)
+[75] name='Bar5' | type='Pane' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar5' | rect=(L318, T1333, R2308, B1374)
+[76] name='' | type='Edit' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='69908' | rect=(L558, T1340, R1937, B1364)
+[77] name='بحث في الموسوعة الحالية :' | type='Custom' | class='' | auto_id='' | rect=(L2119, T1334, R2307, B1372)
+[78] name='ضبط أعدادات البحث' | type='Button' | class='' | auto_id='' | rect=(L1943, T1334, R2116, B1372)
+[79] name='' | type='Button' | class='' | auto_id='' | rect=(L551, T1334, R1942, B1372)
+[80] name='بحث' | type='Button' | class='' | auto_id='' | rect=(L480, T1334, R551, B1372)
+[81] name='اخفاء نتيجه البحث' | type='Button' | class='' | auto_id='' | rect=(L319, T1334, R480, B1372)
+[82] name='' | type='TitleBar' | class='' | auto_id='' | rect=(L315, T39, R2348, B74)
+[83] name='Minimize' | type='Button' | class='' | auto_id='' | rect=(L2170, T36, R2230, B74)
+[84] name='Maximize' | type='Button' | class='' | auto_id='' | rect=(L2230, T36, R2289, B74)
+[85] name='Close' | type='Button' | class='' | auto_id='' | rect=(L2289, T36, R2349, B74)
+
+
+=== UIA WINDOW ===
+Title: 
+Class: WindowsForms10.Window.8.app.0.141b42a_r8_ad1
+Rect: (L954, T509, R1124, B558)
+
+Total descendants: 0
+
+
+
+=== CONNECT WIN32 ===
+
+
+=== WIN32 WINDOW ===
+Title: فلاشة العدالة القانونية
+Class: WindowsForms10.Window.8.app.0.141b42a_r8_ad1
+Rect: (L671, T308, R1247, B723)
+
+Total descendants: 1
+
+[0] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L671, T308, R1247, B723)
+
+
+=== WIN32 WINDOW ===
+Title: 
+Class: tooltips_class32
+Rect: (L0, T0, R0, B0)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: فلاشة العدالة القانونية إصدار 2025
+Class: WindowsForms10.Window.8.app.0.141b42a_r8_ad1
+Rect: (L305, T35, R2358, B1435)
+
+Total descendants: 290
+
+[0] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox3' | rect=(L315, T108, R428, B1377)
+[1] name='-' | type='DevComponents.DotNetBar.ExpandablePanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='ExpandablePanel1' | rect=(L2310, T108, R2348, B1377)
+[2] name='المحتوي القانوني' | type='DevComponents.DotNetBar.PanelEx' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L2310, T140, R2348, B1376)
+[3] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel1' | rect=(L2491, T140, R2491, B1376)
+[4] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T146, R2484, B580)
+[5] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T239, R2484, B580)
+[6] name='موسوعة التقادم' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='12309#2#48' | rect=(L2146, T243, R2459, B299)
+[7] name='موسوعة المواعيد القانونية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='13#2#48' | rect=(L1826, T243, R2139, B299)
+[8] name='موسوعة الدعاوي الجنائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='24#2#48' | rect=(L1506, T243, R1819, B299)
+[9] name='موسوعة الدفوع المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='261#2#48' | rect=(L2146, T306, R2459, B362)
+[10] name='موسوعة الدفوع الجنائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='32535#2#48' | rect=(L1826, T306, R2139, B362)
+[11] name='موسوعة المذكرات الشاملة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='377#2#48' | rect=(L1506, T306, R1819, B362)
+[12] name='موسوعة الدعاوي المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='4657#2#48' | rect=(L2146, T370, R2459, B426)
+[13] name='موسوعة دفوع العقوبات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='678#2#48' | rect=(L1826, T370, R2139, B426)
+[14] name='صيغ العقود والدعاوي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='7#2#48' | rect=(L1506, T370, R1819, B426)
+[15] name='موسوعة الدعاوي الشرعية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='75125#2#48' | rect=(L2146, T434, R2459, B490)
+[16] name='موسوعة البطلان الجنائي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='7590#2#48' | rect=(L1826, T434, R2139, B490)
+[17] name='موسوعة دفوع المرافعات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='7642#2#48' | rect=(L1506, T434, R1819, B490)
+[18] name='موسوعة دفوع الاجراءات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='7659#2#48' | rect=(L2146, T498, R2459, B554)
+[19] name='موسوعة دفوع الايجارت' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='933358#2#48' | rect=(L1826, T498, R2139, B554)
+[20] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T146, R2484, B239)
+[21] name='منظومة المرافعة والدفاع' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T186, R2295, B214)
+[22] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T176, R1521, B222)
+[23] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T176, R2359, B222)
+[24] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T146, R2484, B580)
+[25] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T146, R2484, B580)
+[26] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T593, R2484, B1027)
+[27] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T685, R2484, B1026)
+[28] name='التحريات و القبض و التفتيش' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='2331#2#49' | rect=(L2146, T689, R2459, B745)
+[29] name='الاسلحة والذخائر' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='322#2#49' | rect=(L1826, T689, R2139, B745)
+[30] name='موسوعة المسئولية الجنائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='37117#2#49' | rect=(L1506, T689, R1819, B745)
+[31] name='التشريعات الجائية الخاصة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='3757#2#49' | rect=(L2146, T753, R2459, B809)
+[32] name='الاثبات الجنائى' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='49654#2#49' | rect=(L1826, T753, R2139, B809)
+[33] name='موسوعة الدفوع الجنائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='60000#2#49' | rect=(L1506, T753, R1819, B809)
+[34] name='الغش والتدليس' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='621#2#49' | rect=(L2146, T816, R2459, B872)
+[35] name=' قوانين الارهاب' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='70520#2#49' | rect=(L1826, T816, R2139, B872)
+[36] name='جرائم الاموال العامة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='7106#2#49' | rect=(L1506, T816, R1819, B872)
+[37] name='جرائم الخطأ الطبى' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='72347#2#49' | rect=(L2146, T880, R2459, B936)
+[38] name='موسوعة المخدرات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='78544#2#49' | rect=(L1826, T880, R2139, B936)
+[39] name='شرح قانون الإجراءات الجنائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8817#3#49' | rect=(L1506, T880, R1819, B936)
+[40] name='شرح قانون العقوبات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8821#3#49' | rect=(L2146, T944, R2459, B1000)
+[41] name=' جرائم امن الدوله' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='97526#2#49' | rect=(L1826, T944, R2139, B1000)
+[42] name='موسوعة الاداب العامة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='99333#2#49' | rect=(L1506, T944, R1819, B1000)
+[43] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T593, R2484, B686)
+[44] name='المنظومة الجنائية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T633, R2295, B661)
+[45] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T623, R1521, B669)
+[46] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T623, R2359, B669)
+[47] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T593, R2484, B1027)
+[48] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T593, R2484, B1027)
+[49] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T1039, R2484, B3277)
+[50] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T1131, R2484, B3276)
+[51] name='المشكلات العملية في تصرفات الصغير غير المميز' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='11542#2#50' | rect=(L2146, T1135, R2459, B1191)
+[52] name='حدود النائب في التعاقد مع الغير' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='12972#2#50' | rect=(L1826, T1135, R2139, B1191)
+[53] name='التعويض عن استحالة التنفيذ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='13277#2#50' | rect=(L1506, T1135, R1819, B1191)
+[54] name='حقوق الارتفاق وأسباب زوال وانتهاء حق الارتفاق' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='14262#2#50' | rect=(L2146, T1199, R2459, B1255)
+[55] name='قواعد الالتصاق العقاري' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='16319#2#50' | rect=(L1826, T1199, R2139, B1255)
+[56] name='محل الالتزام وسقوط الحق في بطلان العقد ومدته' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='16598#2#50' | rect=(L1506, T1199, R1819, B1255)
+[57] name='شروط نفاذ الرهن في حق الغير' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='17841#2#50' | rect=(L2146, T1263, R2459, B1319)
+[58] name='شروط نفاذ الرهن في حق الغير' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='17841#2#50' | rect=(L1826, T1263, R2139, B1319)
+[59] name='شرح قانون المرافعات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='17889#3#50' | rect=(L1506, T1263, R1819, B1319)
+[60] name='الإيجار من الباطن والقيود الواردة عليه' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='18253#2#50' | rect=(L2146, T1326, R2459, B1382)
+[61] name='شرح القانون المدني' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='18687#3#50' | rect=(L1826, T1326, R2139, B1382)
+[62] name='الخيار والبدل وتضامن الدائنين أو المدينين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='18693#2#50' | rect=(L1506, T1326, R1819, B1382)
+[63] name='موانع الشفعة وثبوت الحق في الشفعة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='19434#2#50' | rect=(L2146, T1390, R2459, B1446)
+[64] name='حقوق المشتري والتزاماته' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='21664#2#50' | rect=(L1826, T1390, R2139, B1446)
+[65] name='مصلحة المؤمن في وثيقة التأمين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='21868#2#50' | rect=(L1506, T1390, R1819, B1446)
+[66] name='مسئولية والتزامات المصفي عن ديون التركة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23116#2#50' | rect=(L2146, T1454, R2459, B1510)
+[67] name='الصحة والنفاذ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23455#2#50' | rect=(L1826, T1454, R2139, B1510)
+[68] name='دعوى الحراسة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23788#2#50' | rect=(L1506, T1454, R1819, B1510)
+[69] name='وسائل ضمان الحقوق ودعوى شهر الإعسار' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23868#2#50' | rect=(L2146, T1518, R2459, B1574)
+[70] name='عقود المقاولات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='24232#2#50' | rect=(L1826, T1518, R2139, B1574)
+[71] name='عقد الإيجار' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='24647#2#50' | rect=(L1506, T1518, R1819, B1574)
+[72] name='القروض وفوائدها' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='24769#2#50' | rect=(L2146, T1581, R2459, B1637)
+[73] name='محل الوفاء والضمان في سداد الديون' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='24841#2#50' | rect=(L1826, T1581, R2139, B1637)
+[74] name='الدفوع المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='261#2#50' | rect=(L1506, T1581, R1819, B1637)
+[75] name='أسباب فسخ العقد' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='26312#2#50' | rect=(L2146, T1645, R2459, B1701)
+[76] name='انقضاء الشيوع' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='26429#2#50' | rect=(L1826, T1645, R2139, B1701)
+[77] name='إجراءات تطهير العقار المرهون' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='28453#2#50' | rect=(L1506, T1645, R1819, B1701)
+[78] name='حق الانتفاع وحق الاستعمال والسكنى وعقد الحكر' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='28773#2#50' | rect=(L2146, T1709, R2459, B1765)
+[79] name='التركات وأحكام تصفيتها' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='29435#2#50' | rect=(L1826, T1709, R2139, B1765)
+[80] name=' المسئولية المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='3010#2#50' | rect=(L1506, T1709, R1819, B1765)
+[81] name='التعويض عن تأخر المدين في الوفاء بالدين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='31477#2#50' | rect=(L2146, T1773, R2459, B1829)
+[82] name='الشهر العقاري' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='323#2#50' | rect=(L1826, T1773, R2139, B1829)
+[83] name='ضمانات البائع والمشتري في عقد البيع' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='33671#2#50' | rect=(L1506, T1773, R1819, B1829)
+[84] name='عقد العمل وحقوق وواجبات والتزامات العمال' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='34282#2#50' | rect=(L2146, T1836, R2459, B1892)
+[85] name='قضايا التعويضات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='36231#2#50' | rect=(L1826, T1836, R2139, B1892)
+[86] name='عقد الوكالة وأسباب انتهاء الوكالة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='37274#2#50' | rect=(L1506, T1836, R1819, B1892)
+[87] name='مزايا حق الاختصاص على العقارات وأحكام الرهن' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='37612#2#50' | rect=(L2146, T1900, R2459, B1956)
+[88] name='عقد الوديعة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='38572#2#50' | rect=(L1826, T1900, R2139, B1956)
+[89] name='البيوع الواردة على التركات ومرض الموت' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='39554#2#50' | rect=(L1506, T1900, R1819, B1956)
+[90] name='الالتزامات الناشئة عن القانون في حق المدين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='39719#2#50' | rect=(L2146, T1964, R2459, B2020)
+[91] name='البيوع الباطلة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='39934#2#50' | rect=(L1826, T1964, R2139, B2020)
+[92] name='الالتزامات المترتبة على التعاقد' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='41325#2#50' | rect=(L1506, T1964, R1819, B2020)
+[93] name='أسباب إنتهاء عقد الإيجار' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='41415#2#50' | rect=(L2146, T2028, R2459, B2084)
+[94] name='الحقوق المالية الخاصة والعامة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='43784#2#50' | rect=(L1826, T2028, R2139, B2084)
+[95] name='الضمانات القانونية لديون الدائنين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='45888#2#50' | rect=(L1506, T2028, R1819, B2084)
+[96] name='أهلية الشخص الاعتباري في مباشرة حقوقه المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='46314#2#50' | rect=(L2146, T2091, R2459, B2147)
+[97] name='اجراءات نقل الملكية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='46335#2#50' | rect=(L1826, T2091, R2139, B2147)
+[98] name='الدعاوي المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='4657#2#50' | rect=(L1506, T2091, R1819, B2147)
+[99] name='ملكية الأسرة والشيوع في ملكية العمارات ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='47222#2#50' | rect=(L2146, T2155, R2459, B2211)
+[100] name='موانع التقادم وانقطاع التقادم' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='48176#2#50' | rect=(L1826, T2155, R2139, B2211)
+[101] name='عقد الرهن الرسمي وشروط صحته' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='48666#2#50' | rect=(L1506, T2155, R1819, B2211)
+[102] name='الشركات واجراءات تأسيسها' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='48932#2#50' | rect=(L2146, T2219, R2459, B2275)
+[103] name='أحكام الملكية الشائعة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='49766#2#50' | rect=(L1826, T2219, R2139, B2275)
+[104] name='العقد كشرط لانتقال الملكية في المنقول' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='52165#2#50' | rect=(L1506, T2219, R1819, B2275)
+[105] name='دعوى الصورية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='52284#2#50' | rect=(L2146, T2283, R2459, B2339)
+[106] name='حق الملكية والقيود التي ترد على الملكية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='53568#2#50' | rect=(L1826, T2283, R2139, B2339)
+[107] name='الوصية وفقا للقانون وأحكام الشريعة الإسلامية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='54991#2#50' | rect=(L1506, T2283, R1819, B2339)
+[108] name='الشرط الفاسخ والأجل الواقف' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='56215#2#50' | rect=(L2146, T2346, R2459, B2402)
+[109] name='إيجار الوقف وعقد العارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='58681#2#50' | rect=(L1826, T2346, R2139, B2402)
+[110] name='القانون وتطبيقه' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='59776#2#50' | rect=(L1506, T2346, R1819, B2402)
+[111] name='عقد البيع' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='61591#2#50' | rect=(L2146, T2410, R2459, B2466)
+[112] name='التأمين على الحياة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='65184#2#50' | rect=(L1826, T2410, R2139, B2466)
+[113] name='عهد الهبة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='65526#2#50' | rect=(L1506, T2410, R1819, B2466)
+[114] name='حقوق والتزامات الراهن على العقار المرهون' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='65535#2#50' | rect=(L2146, T2474, R2459, B2530)
+[115] name='عقد الرهان والمقامرة وعقد التبرع' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='66274#2#50' | rect=(L1826, T2474, R2139, B2530)
+[116] name='شرح قانون الاثبات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='6652#3#50' | rect=(L1506, T2474, R1819, B2530)
+[117] name='عقد الكفالة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='66927#2#50' | rect=(L2146, T2538, R2459, B2594)
+[118] name='التأمين ضد الحريق' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='67218#2#50' | rect=(L1826, T2538, R2139, B2594)
+[119] name='دعاوى الحيازة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='72566#2#50' | rect=(L1506, T2538, R1819, B2594)
+[120] name='موسوعة التعويضات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='757#2#50' | rect=(L2146, T2601, R2459, B2657)
+[121] name='طرق التعبير عن الإرادة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='76922#2#50' | rect=(L1826, T2601, R2139, B2657)
+[122] name='الاستيلاء' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='77645#2#50' | rect=(L1506, T2601, R1819, B2657)
+[123] name='الملكية العقارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8008#2#50' | rect=(L2146, T2665, R2459, B2721)
+[124] name='الجزاء المترتب على نقص وهلاك المبيع' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='81327#2#50' | rect=(L1826, T2665, R2139, B2721)
+[125] name='دعاوى الشفعة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='81895#2#50' | rect=(L1506, T2665, R1819, B2721)
+[126] name='دعوى الإثراء بلا سبب ودعوى الفضالة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='82274#2#50' | rect=(L2146, T2729, R2459, B2785)
+[127] name='إيجار الأراضي الزراعية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='82291#2#50' | rect=(L1826, T2729, R2139, B2785)
+[128] name='إجراءات التنفيذ على العقار المرهون' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='82451#2#50' | rect=(L1506, T2729, R1819, B2785)
+[129] name='دعوى المقاصة والإبراء' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='82538#2#50' | rect=(L2146, T2793, R2459, B2849)
+[130] name='التعويض الاتفاقي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='83584#2#50' | rect=(L1826, T2793, R2139, B2849)
+[131] name='التقادم' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='86617#2#50' | rect=(L1506, T2793, R1819, B2849)
+[132] name='المسئولية عن عمل الغير' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='86794#2#50' | rect=(L2146, T2856, R2459, B2912)
+[133] name='المشكلات العملية في مباشرة الحقوق المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='86856#2#50' | rect=(L1826, T2856, R2139, B2912)
+[134] name='الشفعة والصورية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='87867#2#50' | rect=(L1506, T2856, R1819, B2912)
+[135] name='حقوق الكفيل والتزاماته والكفالة القضائية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='88395#2#50' | rect=(L2146, T2920, R2459, B2976)
+[136] name='كسب الحيازة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='91263#2#50' | rect=(L1826, T2920, R2139, B2976)
+[137] name='التزامات المشتري' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='91772#2#50' | rect=(L1506, T2920, R1819, B2976)
+[138] name='انقضاء الالتزام' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='92999#2#50' | rect=(L2146, T2984, R2459, B3040)
+[139] name='انقضاء الالتزام' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='92999#2#50' | rect=(L1826, T2984, R2139, B3040)
+[140] name='ضمانات حوالة الحق وشروط حوالة الدين' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='95224#2#50' | rect=(L1506, T2984, R1819, B3040)
+[141] name='بطلان العقود الصادرة من القوام والأوصياء' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='95689#2#50' | rect=(L2146, T3048, R2459, B3104)
+[142] name='بطلان البيع ملك الغير' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='99429#2#50' | rect=(L1826, T3048, R2139, B3104)
+[143] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T1039, R2484, B1132)
+[144] name='المنظومة المدنية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T1079, R2295, B1107)
+[145] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T1069, R1521, B1115)
+[146] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T1069, R2359, B1115)
+[147] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T1039, R2484, B3277)
+[148] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T1039, R2484, B3277)
+[149] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T3289, R2484, B3723)
+[150] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T3381, R2484, B3722)
+[151] name='المرافعات الادارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='1010#2#51' | rect=(L2146, T3385, R2459, B3441)
+[152] name='دعوى الإلغاء' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='21113#2#51' | rect=(L1826, T3385, R2139, B3441)
+[153] name='التاديب فقها و قضاء ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23731#2#51' | rect=(L1506, T3385, R1819, B3441)
+[154] name='المسئولية الادارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='3667#2#51' | rect=(L2146, T3449, R2459, B3505)
+[155] name=' الدعوى التأديبية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='58821#2#51' | rect=(L1826, T3449, R2139, B3505)
+[156] name='التراخيص الادارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='66655#2#51' | rect=(L1506, T3449, R1819, B3505)
+[157] name='التعاقدات الحكومية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='691#2#51' | rect=(L2146, T3513, R2459, B3569)
+[158] name='القضاء الاداري' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='755#2#51' | rect=(L1826, T3513, R2139, B3569)
+[159] name='الخدمة المدنية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='818#2#51' | rect=(L1506, T3513, R1819, B3569)
+[160] name='الصيغ الادارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='84657#2#51' | rect=(L2146, T3576, R2459, B3632)
+[161] name='الدعوى الإدارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='91919#2#51' | rect=(L1826, T3576, R2139, B3632)
+[162] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T3289, R2484, B3382)
+[163] name='المنظومة  الإدارية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T3329, R2295, B3357)
+[164] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T3319, R1521, B3365)
+[165] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T3319, R2359, B3365)
+[166] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T3289, R2484, B3723)
+[167] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T3289, R2484, B3723)
+[168] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T3735, R2484, B4169)
+[169] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T3828, R2484, B4169)
+[170] name='م / اشرف مصطفى كمال ج 4' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='13697#2#52' | rect=(L2146, T3831, R2459, B3887)
+[171] name='شرح قانون رقم 25 لسنة 1920' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='14225#3#52' | rect=(L1826, T3831, R2139, B3887)
+[172] name='م/اشرف مصطفى كمال ج2' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='23586#2#52' | rect=(L1506, T3831, R1819, B3887)
+[173] name='قانون الطفل' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='311#2#52' | rect=(L2146, T3895, R2459, B3951)
+[174] name='م/اشرف مصطفى كمال ج1' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='44592#2#52' | rect=(L1826, T3895, R2139, B3951)
+[175] name='الدعاوي الشرعية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='75125#2#52' | rect=(L1506, T3895, R1819, B3951)
+[176] name='م / اشرف مصطفى كمال ج 3' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='76811#2#52' | rect=(L2146, T3959, R2459, B4015)
+[177] name='شرح قانون رقم 25 لسنة 1929' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='9949#3#52' | rect=(L1826, T3959, R2139, B4015)
+[178] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T3735, R2484, B3828)
+[179] name='منظومة  الأسرة' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T3775, R2295, B3803)
+[180] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T3765, R1521, B3811)
+[181] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T3765, R2359, B3811)
+[182] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T3735, R2484, B4169)
+[183] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T3735, R2484, B4169)
+[184] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T4181, R2484, B4615)
+[185] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T4274, R2484, B4615)
+[186] name='نقض الايجارات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='13#5#53' | rect=(L2146, T4278, R2459, B4334)
+[187] name='الايجار في القانون المدني ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='18687#3#53' | rect=(L1826, T4278, R2139, B4334)
+[188] name='قوانين الايجار الخاصة ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='235#2#53' | rect=(L1506, T4278, R1819, B4334)
+[189] name='قانون المباني' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='367#2#53' | rect=(L2146, T4341, R2459, B4397)
+[190] name='الملكية العقارية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8008#2#53' | rect=(L1826, T4341, R2139, B4397)
+[191] name='الاخلاء في الايجارات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8655#2#53' | rect=(L1506, T4341, R1819, B4397)
+[192] name='دفوع الايجارت' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='933358#2#53' | rect=(L2146, T4405, R2459, B4461)
+[193] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T4181, R2484, B4274)
+[194] name='منظومة الايجارات' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T4221, R2295, B4249)
+[195] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T4211, R1521, B4257)
+[196] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T4211, R2359, B4257)
+[197] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T4181, R2484, B4615)
+[198] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T4181, R2484, B4615)
+[199] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T4628, R2484, B5062)
+[200] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T4720, R2484, B5061)
+[201] name='قانون المحاكم الاقتصادية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='15376#3#54' | rect=(L2146, T4724, R2459, B4780)
+[202] name='المحاكم الإقتصادية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='711#2#54' | rect=(L1826, T4724, R2139, B4780)
+[203] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T4628, R2484, B4721)
+[204] name='المنظومة الأقتصادية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T4668, R2295, B4696)
+[205] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T4658, R1521, B4704)
+[206] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T4658, R2359, B4704)
+[207] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T4628, R2484, B5062)
+[208] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T4628, R2484, B5062)
+[209] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T5074, R2484, B5508)
+[210] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T5166, R2484, B5507)
+[211] name='شرح قانون العمل' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='11230#3#55' | rect=(L2146, T5170, R2459, B5226)
+[212] name='التشريعات المرتبطه' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='11230#1#55' | rect=(L1826, T5170, R2139, B5226)
+[213] name='نقض العمال' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='6#5#55' | rect=(L1506, T5170, R1819, B5226)
+[214] name='التامينات الاجتماعية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='6556#2#55' | rect=(L2146, T5234, R2459, B5290)
+[215] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T5074, R2484, B5167)
+[216] name='المنظومة  العمالية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T5114, R2295, B5142)
+[217] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T5104, R1521, B5150)
+[218] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T5104, R2359, B5150)
+[219] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T5074, R2484, B5508)
+[220] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T5074, R2484, B5508)
+[221] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T5520, R2484, B5954)
+[222] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T5613, R2484, B5954)
+[223] name='الدولى العام' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='401#2#57' | rect=(L2146, T5616, R2459, B5672)
+[224] name='الدولي الخاص' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='402#2#57' | rect=(L1826, T5616, R2139, B5672)
+[225] name='المعاملات الالكترونية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='403#2#57' | rect=(L1506, T5616, R1819, B5672)
+[226] name='الاتفاقيات الدولية' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='404#2#57' | rect=(L2146, T5680, R2459, B5736)
+[227] name='الجنائي الدولي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='405#2#57' | rect=(L1826, T5680, R2139, B5736)
+[228] name='القضاء الدولي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='406#2#57' | rect=(L1506, T5680, R1819, B5736)
+[229] name='حقوق الانسان' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='407#2#57' | rect=(L2146, T5744, R2459, B5800)
+[230] name='القضايا المعاصرة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='408#2#57' | rect=(L1826, T5744, R2139, B5800)
+[231] name='الاقتصاد الدولي' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='409#2#57' | rect=(L1506, T5744, R1819, B5800)
+[232] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T5520, R2484, B5613)
+[233] name='المنظومة  الدولية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T5560, R2295, B5588)
+[234] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T5550, R1521, B5596)
+[235] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T5550, R2359, B5596)
+[236] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T5520, R2484, B5954)
+[237] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T5520, R2484, B5954)
+[238] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T5966, R2484, B6400)
+[239] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T6059, R2484, B6400)
+[240] name='التشريعات المرتبطه' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='15670#1#67' | rect=(L2146, T6063, R2459, B6119)
+[241] name='موسوعة التحكيم و المحكم' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='713#2#67' | rect=(L1826, T6063, R2139, B6119)
+[242] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T5966, R2484, B6059)
+[243] name='منظومة  التحكيم' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T6006, R2295, B6034)
+[244] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T5996, R1521, B6042)
+[245] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T5996, R2359, B6042)
+[246] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T5966, R2484, B6400)
+[247] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T5966, R2484, B6400)
+[248] name='' | type='eladalah2025.UserControl_l' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='UserControl_l' | rect=(L1338, T6413, R2484, B6847)
+[249] name='' | type='System.Windows.Forms.FlowLayoutPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='FlowLayoutPanel2' | rect=(L1338, T6505, R2484, B6846)
+[250] name='النقض التجاري' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='2#5#68' | rect=(L2146, T6509, R2459, B6565)
+[251] name='موسوعة الضرائب الشاملة ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='2333#2#68' | rect=(L1826, T6509, R2139, B6565)
+[252] name='الموسوعة الجمركيه ' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='44144#2#68' | rect=(L1506, T6509, R1819, B6565)
+[253] name='قانون التجارة' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='6#2#68' | rect=(L2146, T6573, R2459, B6629)
+[254] name='موسوعة الشركات' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='714#2#68' | rect=(L1826, T6573, R2139, B6629)
+[255] name='التشريعات المرتبطه' | type='DevComponents.DotNetBar.ButtonX' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='8824#1#68' | rect=(L1506, T6573, R1819, B6629)
+[256] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel1' | rect=(L1338, T6413, R2484, B6506)
+[257] name='المنظومة  التجارية' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='lbl_name' | rect=(L1530, T6453, R2295, B6481)
+[258] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox2' | rect=(L1466, T6443, R1521, B6489)
+[259] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L2304, T6443, R2359, B6489)
+[260] name='' | type='eladalah2025.TransparentPictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TransparentPictureBox1' | rect=(L1338, T6413, R2484, B6847)
+[261] name='' | type='System.Windows.Forms.Panel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Panel2' | rect=(L1338, T6413, R2484, B6847)
+[262] name='ItemPanel2' | type='DevComponents.DotNetBar.ItemPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='ItemPanel2' | rect=(L2310, T140, R2491, B1376)
+[263] name='ItemPanel1' | type='DevComponents.DotNetBar.ItemPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='ItemPanel1' | rect=(L2166, T140, R2347, B1376)
+[264] name='المحتوي القانوني' | type='DevComponents.DotNetBar.PanelExTitle' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L2310, T108, R2348, B141)
+[265] name='' | type='DevComponents.DotNetBar.Ribbon.RibbonClientPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='RibbonClientPanel1' | rect=(L315, T279, R315, B279)
+[266] name='' | type='System.Windows.Forms.PictureBox' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='PictureBox1' | rect=(L315, T279, R315, B279)
+[267] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox1' | rect=(L396, T635, R396, B661)
+[268] name='TabStrip1' | type='DevComponents.DotNetBar.TabStrip' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='TabStrip1' | rect=(L315, T74, R2348, B108)
+[269] name='Bar2' | type='DevComponents.DotNetBar.Bar' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar2' | rect=(L315, T1376, R2348, B1425)
+[270] name='' | type='System.Windows.Forms.MdiClient' | class='WindowsForms10.MDICLIENT.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L315, T108, R2310, B1377)
+[271] name='موسوعة التقادم' | type='eladalah2025.Frm_Tree' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Frm_Tree' | rect=(L318, T110, R2308, B1374)
+[272] name='' | type='System.Windows.Forms.SplitContainer' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='SplitContainer1' | rect=(L318, T110, R2308, B1333)
+[273] name='' | type='System.Windows.Forms.SplitterPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L318, T110, R1289, B1333)
+[274] name='' | type='System.Windows.Forms.SplitContainer' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='SplitContainer2' | rect=(L318, T110, R1289, B1333)
+[275] name='' | type='System.Windows.Forms.SplitterPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L318, T110, R1289, B1333)
+[276] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='txtTag' | rect=(L888, T639, R888, B665)
+[277] name='البدء :
+تتعدد أسباب انقضاء الدعوى الجنائية ، تلك الأسباب التي اعتمدها المشرع الجنائي المصري ، فهي أسباب تشريعية ، وقد قسمت هذه الأسباب الي نوعين من الأسباب ، النوع الأول وهو المسمي بالأسباب العامة لانقضاء الدعوى الجنائية ويشتمل علي الأسباب الآتية " وفاة المتهم - العفو العام - مضي المدة - الحكم البات " أما النوع الثاني فهو الأسباب الخاصة لانقضاء الدعوى الجنائية ونعني التصالح والصالح في بعض مواد الجنح والمخالفات .
+ومن وسط هذا الركام للأسباب المتعددة لانقضاء الدعوى الجنائية سواء العامة أو الخاصة اخترنا السبب المتعلق بانقضاء الدعوى الجنائية بمضي المدة لكي يكون موضوع المجلد الأول من موسوعتنا.
+
+معني التقادم لغة :
+التقادم لغة من القدم ، فيقال هذا شيء قديم أي مضي عليه حين من الزمن والتقادم لغة ضد الحدوث ، وهو اسم من القدم ، والقدم اسم من أسماء الزمان 
+
+معني التقادم كاصطلاح قانوني  مستخدم في المجال الجنائي :
+يعني التقادم كاصطلاح قانوني مستخدم في المجال الجنائي : مضي زمن - زمن محدد بإرادة المشرع الجنائي - بين واقعتين الواقعة الأولي ارتكاب جريمة ما ، جناية أو جنحة أو مخالفة ، الواقعة الثانية بدء التحقيق في الدعوى الجنائية الناشئة عنها أو رفعها إلى القضاء الجنائي ، ويترتب علي مضي أو فوات - هذا الزمن المحدد بإرادة المشرع - انقضاء الدعوى الجنائية بالتقادم .
+
+فجوهر التقادم الجنائي زمن - زمن مضي - بين حدثين أو واقعتين ، الحدث الأول وقوع أو ارتكاب جريمة  ، والحدث الثاني بدء التحقيق في هذه الجريمة أو رفعها إلى المحكمة الجنائية  .
+وفي تعريف مختلف للتقادم يركز علي نتيجة التقادم يقرر الدكتور جلال ثروت : معني التقادم زوال الأثر القانوني لفعل أو إجراء معين إذا انقضت مدة معينة ، وفي نطاق قانون الإجراءات الجنائية يقصد به مضي مدة معينة بغير انقطاع علي الحق في تحريك الدعوى الجنائيـة مما يترتب عليـه انقضاء هذا الحق وسقوط الدعوى العمومية  . 
+_______________________
+  مختار الصحيح - باب ق . د . م ص 524 .
+  د . عوض محمد عوض - المرجع السابق - ط 1999 - ص 107 .
+  نظم الإجراءات الجنائية - طبعة 1997 - دار الجامعة الجديدة - ص 202 - الفقرة 177' | type='System.Windows.Forms.RichTextBox' | class='WindowsForms10.RichEdit20W.app.0.141b42a_r8_ad1' | auto_id='rt_txt' | rect=(L318, T159, R1289, B1333)
+[278] name='Bar1' | type='DevComponents.DotNetBar.Bar' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar1' | rect=(L318, T110, R1289, B159)
+[279] name='' | type='DevComponents.DotNetBar.Controls.TextBoxX' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L1108, T121, R1273, B145)
+[280] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox3' | rect=(L553, T263, R553, B289)
+[281] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox2' | rect=(L553, T223, R553, B249)
+[282] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox1' | rect=(L553, T183, R553, B209)
+[283] name='' | type='System.Windows.Forms.TextBox' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='TextBox4' | rect=(L421, T273, R422, B299)
+[284] name='' | type='System.Windows.Forms.SplitterPanel' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L1295, T110, R2308, B1333)
+[285] name='' | type='System.Windows.Forms.TreeView' | class='WindowsForms10.SysTreeView32.app.0.141b42a_r8_ad1' | auto_id='tv_Subjects' | rect=(L1295, T159, R2308, B1333)
+[286] name='Bar4' | type='DevComponents.DotNetBar.Bar' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar4' | rect=(L1295, T110, R2308, B159)
+[287] name='' | type='DevComponents.DotNetBar.Controls.TextBoxX' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L1415, T121, R2009, B145)
+[288] name='Bar5' | type='DevComponents.DotNetBar.Bar' | class='WindowsForms10.Window.8.app.0.141b42a_r8_ad1' | auto_id='Bar5' | rect=(L318, T1333, R2308, B1374)
+[289] name='' | type='DevComponents.DotNetBar.Controls.TextBoxX' | class='WindowsForms10.EDIT.app.0.141b42a_r8_ad1' | auto_id='' | rect=(L558, T1340, R1937, B1364)
+
+
+=== WIN32 WINDOW ===
+Title: 
+Class: WindowsForms10.Window.8.app.0.141b42a_r8_ad1
+Rect: (L954, T509, R1124, B558)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: 
+Class: WindowsForms10.Window.0.app.0.141b42a_r8_ad1
+Rect: (L0, T0, R8, B8)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: .NET-BroadcastEventWindow.4.0.0.0.141b42a.0
+Class: .NET-BroadcastEventWindow.4.0.0.0.141b42a.0
+Rect: (L0, T0, R0, B0)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: GDI+ Window (eladalah2025.exe)
+Class: GDI+ Hook Window Class
+Rect: (L0, T0, R1, B1)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: M
+Class: MSCTFIME UI
+Rect: (L0, T0, R0, B0)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: Default IME
+Class: IME
+Rect: (L0, T0, R0, B0)
+
+Total descendants: 0
+
+
+
+=== WIN32 WINDOW ===
+Title: Default IME
+Class: IME
+Rect: (L0, T0, R0, B0)
+
+Total descendants: 0
+
