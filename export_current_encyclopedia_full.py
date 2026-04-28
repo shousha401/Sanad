@@ -1,4 +1,5 @@
 from pywinauto import Application
+from pywinauto.keyboard import send_keys
 from pathlib import Path
 from docx import Document
 import pyautogui
@@ -17,17 +18,10 @@ DOCX_DIR.mkdir(parents=True, exist_ok=True)
 TXT_DIR.mkdir(parents=True, exist_ok=True)
 LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-# Coordinates after Eladalah is maximized
-TREE_X_REL = 1540
-FIRST_ITEM_Y_REL = 278
-TREE_ROW_STEP = 28
-
-ROWS_PER_SCREEN = 18
-MAX_SCREENS = 500
-SCROLL_AMOUNT = -10
-
 MIN_CHARS = 40
-STOP_AFTER_NO_NEW_SCREENS = 4
+MAX_PAGES = 1000
+STOP_AFTER_STAGNANT_PAGES = 6
+NAV_WAIT_SECONDS = 1.1
 
 def text_hash(text):
     return hashlib.md5(text.encode("utf-8", errors="ignore")).hexdigest()
@@ -45,6 +39,12 @@ def get_info(control, attr):
         return getattr(control.element_info, attr, "") or ""
     except Exception:
         return ""
+
+def get_name(control):
+    try:
+        return (control.window_text() or get_info(control, "name") or "").strip()
+    except Exception:
+        return (get_info(control, "name") or "").strip()
 
 def get_eladalah_window():
     app = Application(backend="uia").connect(path="eladalah2025.exe", timeout=10)
@@ -121,6 +121,114 @@ def read_rt_txt(main_window):
 
     return ""
 
+def find_tree_control(main_window):
+    controls = main_window.descendants()
+    for c in controls:
+        auto_id = get_info(c, "automation_id")
+        class_name = get_info(c, "class_name")
+        control_type = get_info(c, "control_type")
+        if (
+            auto_id == "tv_Subjects"
+            or "SysTreeView32" in class_name
+            or control_type == "Tree"
+        ):
+            return c
+    return None
+
+def rect_center(rect):
+    return ((rect.left + rect.right) // 2, (rect.top + rect.bottom) // 2)
+
+def get_visible_tree_items(tree_ctrl):
+    items = []
+    tree_rect = tree_ctrl.rectangle()
+
+    for item in tree_ctrl.descendants():
+        if get_info(item, "control_type") != "TreeItem":
+            continue
+        try:
+            if not item.is_visible():
+                continue
+        except Exception:
+            pass
+
+        try:
+            r = item.rectangle()
+            if r.bottom <= tree_rect.top or r.top >= tree_rect.bottom:
+                continue
+        except Exception:
+            r = None
+
+        name = get_name(item)
+        items.append((item, name, r))
+
+    items.sort(key=lambda x: (x[2].top if x[2] else 10**9, x[1]))
+    return items
+
+def visible_signature(visible_items):
+    sig = []
+    for _, name, r in visible_items:
+        label = name if name else "(blank)"
+        top = r.top if r else -1
+        sig.append(f"{top}:{label}")
+    return tuple(sig)
+
+def click_tree_item(item, fallback_x=None):
+    try:
+        item.click_input()
+        return True, "treeitem_click_input"
+    except Exception:
+        try:
+            r = item.rectangle()
+            x, y = rect_center(r)
+            pyautogui.click(x, y)
+            return True, "treeitem_rect_center_click"
+        except Exception:
+            if fallback_x is not None:
+                try:
+                    r = item.rectangle()
+                    y = (r.top + r.bottom) // 2
+                    pyautogui.click(fallback_x, y)
+                    return True, "row_fallback_x_click"
+                except Exception:
+                    pass
+    return False, "click_failed"
+
+def try_move_tree_down(main_win, tree_ctrl, before_sig):
+    tree_rect = tree_ctrl.rectangle()
+    cx, cy = rect_center(tree_rect)
+
+    def after_changed():
+        now_items = get_visible_tree_items(tree_ctrl)
+        now_sig = visible_signature(now_items)
+        return now_sig != before_sig, now_items, now_sig
+
+    movement_methods = [
+        ("PageDown", lambda: send_keys("{PGDN}")),
+        ("Down*12", lambda: send_keys("{DOWN 12}")),
+        ("Down*24", lambda: send_keys("{DOWN 24}")),
+        ("MouseWheel", lambda: pyautogui.scroll(-700, x=cx, y=cy)),
+    ]
+
+    for method_name, action in movement_methods:
+        main_win.set_focus()
+        time.sleep(0.2)
+        try:
+            tree_ctrl.set_focus()
+        except Exception:
+            pyautogui.click(cx, cy)
+        time.sleep(0.15)
+
+        action()
+        time.sleep(NAV_WAIT_SECONDS)
+
+        changed, now_items, now_sig = after_changed()
+        if changed:
+            return True, method_name, now_items, now_sig
+
+    now_items = get_visible_tree_items(tree_ctrl)
+    now_sig = visible_signature(now_items)
+    return False, "none", now_items, now_sig
+
 def load_done_hashes():
     done = set()
 
@@ -153,13 +261,11 @@ def main():
     done_hashes = load_done_hashes()
     print(f"Already exported hashes: {len(done_hashes)}")
 
-    main_win, rect = get_eladalah_window()
-
-    tree_x = rect.left + TREE_X_REL
-    scroll_x = tree_x
-    scroll_y = rect.top + 650
-
-    print(f"Tree click X: {tree_x}")
+    main_win, _ = get_eladalah_window()
+    tree_ctrl = find_tree_control(main_win)
+    if tree_ctrl is None:
+        raise RuntimeError("Could not find tv_Subjects tree control.")
+    print("Tree control located.")
 
     file_exists = LOG_FILE.exists()
 
@@ -167,9 +273,9 @@ def main():
         fieldnames = [
             "status",
             "screen",
+            "page",
+            "visible_title",
             "row",
-            "click_x",
-            "click_y",
             "chars",
             "hash",
             "title",
@@ -182,39 +288,48 @@ def main():
         if not file_exists or LOG_FILE.stat().st_size == 0:
             writer.writeheader()
 
-        no_new_screens = 0
+        stagnant_pages = 0
 
-        for screen in range(1, MAX_SCREENS + 1):
-            print(f"\n========== SCREEN {screen} ==========")
+        for page in range(1, MAX_PAGES + 1):
+            print(f"\n========== PAGE {page} ==========")
 
-            new_this_screen = 0
+            main_win.set_focus()
+            time.sleep(0.2)
+            visible_items = get_visible_tree_items(tree_ctrl)
+            before_sig = visible_signature(visible_items)
 
-            for row in range(ROWS_PER_SCREEN):
-                item_y = rect.top + FIRST_ITEM_Y_REL + (row * TREE_ROW_STEP)
+            before_names = [name or "(blank)" for _, name, _ in visible_items]
+            print(f"Visible before move candidate ({len(before_names)}): {before_names}")
+
+            new_this_page = 0
+
+            for idx, (item, item_name, _) in enumerate(visible_items, start=1):
+                row_label = item_name or f"row-{idx}"
 
                 try:
                     main_win.set_focus()
                     time.sleep(0.2)
-
-                    pyautogui.click(tree_x, item_y)
-                    time.sleep(1.1)
+                    clicked, click_method = click_tree_item(item)
+                    if not clicked:
+                        raise RuntimeError("Failed to click tree item.")
+                    time.sleep(0.9)
 
                     text = read_rt_txt(main_win)
 
                     if len(text.strip()) < MIN_CHARS:
-                        print(f"SKIP screen {screen}, row {row+1}: too short")
+                        print(f"SKIP page {page}, row {idx}: too short ({row_label})")
                         writer.writerow({
                             "status": "SKIP_SHORT",
-                            "screen": screen,
-                            "row": row + 1,
-                            "click_x": tree_x,
-                            "click_y": item_y,
+                            "screen": page,
+                            "page": page,
+                            "visible_title": row_label,
+                            "row": idx,
                             "chars": len(text.strip()),
                             "hash": "",
                             "title": "",
                             "docx_file": "",
                             "txt_file": "",
-                            "error": "too short",
+                            "error": f"too short; click={click_method}",
                         })
                         f.flush()
                         continue
@@ -222,28 +337,28 @@ def main():
                     h = text_hash(text)
 
                     if h in done_hashes:
-                        print(f"DUPLICATE screen {screen}, row {row+1}")
+                        print(f"DUPLICATE page {page}, row {idx}: {row_label}")
                         writer.writerow({
                             "status": "DUPLICATE",
-                            "screen": screen,
-                            "row": row + 1,
-                            "click_x": tree_x,
-                            "click_y": item_y,
+                            "screen": page,
+                            "page": page,
+                            "visible_title": row_label,
+                            "row": idx,
                             "chars": len(text),
                             "hash": h,
                             "title": "",
                             "docx_file": "",
                             "txt_file": "",
-                            "error": "",
+                            "error": f"duplicate; click={click_method}",
                         })
                         f.flush()
                         continue
 
                     lines = [x.strip() for x in text.splitlines() if x.strip()]
-                    title = lines[0][:100] if lines else f"screen-{screen}-row-{row+1}"
+                    title = lines[0][:100] if lines else f"page-{page}-row-{idx}"
                     safe_title = clean_filename(title)
 
-                    base_name = f"s{screen:04d}-r{row+1:02d}-{short_hash(text)}-{safe_title}"
+                    base_name = f"s{page:04d}-r{idx:02d}-{short_hash(text)}-{safe_title}"
                     docx_path = DOCX_DIR / f"{base_name}.docx"
                     txt_path = TXT_DIR / f"{base_name}.txt"
 
@@ -251,36 +366,36 @@ def main():
                     save_docx(text, docx_path, title)
 
                     done_hashes.add(h)
-                    new_this_screen += 1
+                    new_this_page += 1
 
-                    print(f"OK screen {screen}, row {row+1}: {len(text)} chars")
+                    print(f"OK page {page}, row {idx}: {len(text)} chars ({row_label})")
                     print(f"Saved: {docx_path.name}")
 
                     writer.writerow({
                         "status": "OK",
-                        "screen": screen,
-                        "row": row + 1,
-                        "click_x": tree_x,
-                        "click_y": item_y,
+                        "screen": page,
+                        "page": page,
+                        "visible_title": row_label,
+                        "row": idx,
                         "chars": len(text),
                         "hash": h,
                         "title": title,
                         "docx_file": str(docx_path),
                         "txt_file": str(txt_path),
-                        "error": "",
+                        "error": f"click={click_method}",
                     })
                     f.flush()
 
                 except Exception as e:
-                    print(f"FAILED screen {screen}, row {row+1}")
+                    print(f"FAILED page {page}, row {idx}")
                     print(traceback.format_exc())
 
                     writer.writerow({
                         "status": "FAILED",
-                        "screen": screen,
-                        "row": row + 1,
-                        "click_x": tree_x,
-                        "click_y": item_y,
+                        "screen": page,
+                        "page": page,
+                        "visible_title": row_label,
+                        "row": idx,
                         "chars": 0,
                         "hash": "",
                         "title": "",
@@ -290,20 +405,21 @@ def main():
                     })
                     f.flush()
 
-            print(f"New items this screen: {new_this_screen}")
+            moved, nav_method, after_items, after_sig = try_move_tree_down(main_win, tree_ctrl, before_sig)
+            after_names = [name or "(blank)" for _, name, _ in after_items]
+            print(f"Visible after move ({len(after_names)}): {after_names}")
+            print(f"Movement succeeded: {moved} (method={nav_method})")
+            print(f"New exports this page: {new_this_page}")
 
-            if new_this_screen == 0:
-                no_new_screens += 1
-                print(f"No-new screen count: {no_new_screens}/{STOP_AFTER_NO_NEW_SCREENS}")
+            if (not moved) and new_this_page == 0:
+                stagnant_pages += 1
             else:
-                no_new_screens = 0
+                stagnant_pages = 0
 
-            if no_new_screens >= STOP_AFTER_NO_NEW_SCREENS:
-                print("Stopping: no new content after several screens.")
+            print(f"Stagnant pages: {stagnant_pages}/{STOP_AFTER_STAGNANT_PAGES}")
+            if stagnant_pages >= STOP_AFTER_STAGNANT_PAGES:
+                print("Stopping: repeated navigation attempts produced no new items/hashes.")
                 break
-
-            pyautogui.scroll(SCROLL_AMOUNT, x=scroll_x, y=scroll_y)
-            time.sleep(1.5)
 
     print("\nFull export finished.")
     print(f"DOCX: {DOCX_DIR}")
